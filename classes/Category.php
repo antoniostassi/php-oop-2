@@ -2,7 +2,7 @@
 
 class Category {
     private $name;
-    public $icon;
+    private $icon;
 
     public function __construct(String $name, String $icon) {
         $this->name = $name;
