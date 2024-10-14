@@ -12,9 +12,7 @@ class Product {
     private $amount;
 
     public function __construct(string $name, string $type, Category $category, int $price, int $amount ) {
-        if ($name <= 15) {
-            $this->name = $name;
-        };
+        $this->name = $name;
         $this->type = $type;
         $this->category = $category;
         $this->price = $price;
@@ -51,4 +49,4 @@ $allProducts[] = new Cuccia("Cuccia per gatti", "Cuccia", new Category("Gatto", 
 $allProducts[] = new Gioco("Boomerang", "Gioco", new Category("Cane", "A"), 10, 2);
 $allProducts[] = new Gioco("Gomitolo di Lana", "Gioco", new Category("Gatto", "A"), 10, 2);
 
-var_dump($allProducts);
+//var_dump($allProducts);
