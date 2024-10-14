@@ -1,5 +1,8 @@
 <?php 
 include_once __DIR__."/Category.php";
+include_once __DIR__."/Cibo.php";
+include_once __DIR__."/Cuccia.php";
+include_once __DIR__."/Gioco.php";
 
 class Product {
     private $name;
@@ -40,4 +43,12 @@ class Product {
 
 }
 
-$cibo = new Product("Cibo per cane", "Cibo", new Category("Cani", "🥗"), 10, 5);
+$allProducts = [];
+$allProducts[] = new Cibo("Crocchette di carne", "Cibo", new Category("Cane", "A"), 10, 2);
+$allProducts[] = new Cibo("Crocchette di pesce", "Cibo", new Category("Gatto", "A"), 10, 2);
+$allProducts[] = new Cuccia("Cuccia per cani", "Cuccia", new Category("Cane", "A"), 10, 2);
+$allProducts[] = new Cuccia("Cuccia per gatti", "Cuccia", new Category("Gatto", "A"), 10, 2);
+$allProducts[] = new Gioco("Boomerang", "Gioco", new Category("Cane", "A"), 10, 2);
+$allProducts[] = new Gioco("Gomitolo di Lana", "Gioco", new Category("Gatto", "A"), 10, 2);
+
+var_dump($allProducts);
