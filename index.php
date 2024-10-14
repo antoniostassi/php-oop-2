@@ -15,12 +15,12 @@ include_once __DIR__."/classes/Product.php"
             <h1>E-Commerce</h1>
                 <div class="row">
                     <?php foreach ($allProducts as $singleProduct) {?>
-                        <div class="col-6">
+                        <div class="col-4">
                             <div class="card my-3 p-2">
                                 <p><strong>Nome prodotto:</strong> <?php echo $singleProduct->getName() ?></p>
                                 <p><strong>Categoria:</strong> <?php echo $singleProduct->getCategory()->getName(); echo ' '.$singleProduct->getCategory()->getIcon();?></p>
-                                <p><strong>Prezzo:</strong> <?php echo $singleProduct->getPrice().' €' ?></p>
                                 <p><strong>Tipo:</strong> <?php echo $singleProduct->getType() ?></p>
+                                <p><strong>Prezzo:</strong> <?php echo $singleProduct->getPrice().' €' ?></p>
                             </div>
                         </div>
                     <?php } ?>
